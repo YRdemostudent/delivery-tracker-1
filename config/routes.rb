@@ -1,23 +1,23 @@
 Rails.application.routes.draw do
-  get("/", { :controller => "todos", :action => "index" })
+  get("/", { :controller => "deliveries", :action => "index" })
 
 
-  # Routes for the Todo resource:
+  # Routes for the Delivery resource:
 
   # CREATE
-  post("/insert_delivery", { :controller => "todos", :action => "create" })
+  post("/insert_delivery", { :controller => "deliveries", :action => "create" })
           
   # READ
-  get("/todos", { :controller => "todos", :action => "index" })
+  get("/deliveries", { :controller => "deliveries", :action => "index" })
   
-  get("/todos/:path_id", { :controller => "todos", :action => "show" })
+  get("/deliveries/:path_id", { :controller => "deliveries", :action => "show" })
   
   # UPDATE
   
-  post("/modify_delivery/:path_id", { :controller => "todos", :action => "update" })
+  post("/modify_delivery/:path_id", { :controller => "deliveries", :action => "update" })
   
   # DELETE
-  get("/delete_delivery/:path_id", { :controller => "todos", :action => "destroy" })
+  get("/delete_delivery/:path_id", { :controller => "deliveries", :action => "destroy" })
 
   #------------------------------
 
@@ -49,3 +49,4 @@ Rails.application.routes.draw do
   #------------------------------
 
 end
+
